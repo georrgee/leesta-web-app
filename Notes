@@ -1,0 +1,26 @@
+Section 5: Compontents and Databinding Deep Dive
+
+64. Splitting apps into Compontents
+
+66. Binding to Custom Properties
+
+*Error = Isn't a known property...
+    - not true? there is a property there! We defined it! and it is public
+
+    Answer:
+         By default all properties of components are only accessible inside components, not from the outside
+         you dont want all your properties bindable from the outside
+
+
+77. Understanding Component Lifecycle
+
+                            The Lifecycle
+                            
+    - ngOnChanges:           called after the bound input property changes
+    - ngOnInit:              called once the component is initialized. Runs after the constructor
+    - ngDoCheck:             called during every change detection run. Runs alot. i.e. property changes
+    - ngAfterContentInit:    called after content (ng-content) has been projected into view
+    - ngAfterContentChecked: called every time the projected content has been checked
+    - ngAfterViewInit:       called after the component's view (and child views) has been initialized
+    - ngAfterViewChecked:    called every time the view (and child views) have ben checked
+    - ngOnDestroy:           called once the component is about to be destroyed
